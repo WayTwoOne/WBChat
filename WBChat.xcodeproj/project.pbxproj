@@ -11,6 +11,11 @@
 		E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD62C41896F00E550C3 /* ContentView.swift */; };
 		E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BD82C41897100E550C3 /* Assets.xcassets */; };
 		E71C3BDC2C41897100E550C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */; };
+		E7EB95752C419252002E38DC /* VerificationScreenWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB956E2C419252002E38DC /* VerificationScreenWithAnimation.swift */; };
+		E7EB95772C419252002E38DC /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB95712C419252002E38DC /* ContinueButton.swift */; };
+		E7EB95782C419252002E38DC /* PhoneNumberLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB95722C419252002E38DC /* PhoneNumberLabel.swift */; };
+		E7EB95792C419252002E38DC /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB95732C419252002E38DC /* PhoneNumberTextField.swift */; };
+		E7EB957A2C419252002E38DC /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB95742C419252002E38DC /* Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		E71C3BD62C41896F00E550C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E71C3BD82C41897100E550C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7EB956E2C419252002E38DC /* VerificationScreenWithAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationScreenWithAnimation.swift; sourceTree = "<group>"; };
+		E7EB95712C419252002E38DC /* ContinueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
+		E7EB95722C419252002E38DC /* PhoneNumberLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberLabel.swift; sourceTree = "<group>"; };
+		E7EB95732C419252002E38DC /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
+		E7EB95742C419252002E38DC /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,8 @@
 			children = (
 				E71C3BD42C41896F00E550C3 /* WBChatApp.swift */,
 				E71C3BD62C41896F00E550C3 /* ContentView.swift */,
+				E7EB95702C419252002E38DC /* Views */,
+				E7EB95742C419252002E38DC /* Extention.swift */,
 				E71C3BD82C41897100E550C3 /* Assets.xcassets */,
 				E71C3BDA2C41897100E550C3 /* Preview Content */,
 			);
@@ -65,6 +77,17 @@
 				E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7EB95702C419252002E38DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB956E2C419252002E38DC /* VerificationScreenWithAnimation.swift */,
+				E7EB95712C419252002E38DC /* ContinueButton.swift */,
+				E7EB95722C419252002E38DC /* PhoneNumberLabel.swift */,
+				E7EB95732C419252002E38DC /* PhoneNumberTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EB957A2C419252002E38DC /* Extention.swift in Sources */,
+				E7EB95752C419252002E38DC /* VerificationScreenWithAnimation.swift in Sources */,
+				E7EB95772C419252002E38DC /* ContinueButton.swift in Sources */,
+				E7EB95792C419252002E38DC /* PhoneNumberTextField.swift in Sources */,
 				E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */,
+				E7EB95782C419252002E38DC /* PhoneNumberLabel.swift in Sources */,
 				E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
