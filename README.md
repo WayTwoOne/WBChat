@@ -1,1 +1,1 @@
-Старый репозиторий: https://github.com/WayTwoOne/WBMessenger/tree/main/WBMessenger/HomeWorks/HW3
+Старый репозиторий: https://github.com/WayTwoOne/WBMessenger
