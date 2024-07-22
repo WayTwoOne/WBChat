@@ -11,6 +11,10 @@
 		E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD62C41896F00E550C3 /* ContentView.swift */; };
 		E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BD82C41897100E550C3 /* Assets.xcassets */; };
 		E71C3BDC2C41897100E550C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */; };
+		E7266EE12C4EDF7A00497BF1 /* 1.StringHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7266EE02C4EDF7A00497BF1 /* 1.StringHash.swift */; };
+		E7266EE32C4EE75A00497BF1 /* 2.CustomHashFunctionForStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7266EE22C4EE75A00497BF1 /* 2.CustomHashFunctionForStrings.swift */; };
+		E7266EE52C4EEB4C00497BF1 /* 3.Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7266EE42C4EEB4C00497BF1 /* 3.Set.swift */; };
+		E7266EE92C4EF1DA00497BF1 /* 4.Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7266EE82C4EF1DA00497BF1 /* 4.Dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		E71C3BD62C41896F00E550C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E71C3BD82C41897100E550C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7266EE02C4EDF7A00497BF1 /* 1.StringHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.StringHash.swift; sourceTree = "<group>"; };
+		E7266EE22C4EE75A00497BF1 /* 2.CustomHashFunctionForStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.CustomHashFunctionForStrings.swift; sourceTree = "<group>"; };
+		E7266EE42C4EEB4C00497BF1 /* 3.Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.Set.swift; sourceTree = "<group>"; };
+		E7266EE82C4EF1DA00497BF1 /* 4.Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.Dictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				E71C3BD42C41896F00E550C3 /* WBChatApp.swift */,
 				E71C3BD62C41896F00E550C3 /* ContentView.swift */,
+				E7266EE02C4EDF7A00497BF1 /* 1.StringHash.swift */,
+				E7266EE22C4EE75A00497BF1 /* 2.CustomHashFunctionForStrings.swift */,
+				E7266EE42C4EEB4C00497BF1 /* 3.Set.swift */,
+				E7266EE82C4EF1DA00497BF1 /* 4.Dictionary.swift */,
 				E71C3BD82C41897100E550C3 /* Assets.xcassets */,
 				E71C3BDA2C41897100E550C3 /* Preview Content */,
 			);
@@ -138,6 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */,
+				E7266EE32C4EE75A00497BF1 /* 2.CustomHashFunctionForStrings.swift in Sources */,
+				E7266EE12C4EDF7A00497BF1 /* 1.StringHash.swift in Sources */,
+				E7266EE92C4EF1DA00497BF1 /* 4.Dictionary.swift in Sources */,
+				E7266EE52C4EEB4C00497BF1 /* 3.Set.swift in Sources */,
 				E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
