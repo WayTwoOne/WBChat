@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    let custom = CustomHashFunction(string: "Button")
+    let stringHash = StringHash()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button {
+                custom.hashValue
+            } label: {
+                Text("Button")
+            }
+            
         }
-        .padding()
+        .padding(50)
     }
 }
 
