@@ -1,0 +1,44 @@
+//
+//  ContactRow.swift
+//  WBChat
+//
+//  Created by Vladimir on 23.07.2024.
+//
+
+import SwiftUI
+
+struct ContactRow: View {
+    let user: User
+    var body: some View {
+        LazyVStack(alignment: .center) {
+            Image(systemName: "person")
+                .resizable()
+                .frame(width: 150, height: 150, alignment: .center)
+                .padding()
+            
+            LazyHStack(alignment: .center) {
+                VStack(alignment: .leading) {
+                    Text("Name: ")
+                    Text("Email: ")
+                    
+                        .padding(.vertical, 5)
+                }
+                
+                
+                VStack(alignment: .leading)  {
+                    Text(user.name)
+                    Text(user.email)
+                        .padding(.vertical, 5)
+                }
+            }
+            .padding()
+            Text(user.bio)
+        }
+    }
+}
+
+struct ContactRow_Previews: PreviewProvider {
+    static var previews: some View {
+        ContactRow(user: User(name: "Tim", email: "email.con", bio: "Hello world"))
+    }
+}

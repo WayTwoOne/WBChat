@@ -8,19 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var router = Router()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            NavigationStack(path: $router.path) {
+                router.getPage(.contacts)
+                    .navigationDestination(for: Pages.self) { page in
+                        router.getPage(page)
+                    }
+            }
+            .environmentObject(router)
+            
+            .tabItem({
+                Text("Observed")
+            })
+            
+            ContactsSingletonView()
+                .tabItem {
+                    Text("Singleton")
+                }
+            
+            
+            
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Router())
     }
 }

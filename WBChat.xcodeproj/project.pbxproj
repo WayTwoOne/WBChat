@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71C13CC2C4FDB4E007A1D5E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13CB2C4FDB4E007A1D5E /* Router.swift */; };
+		E71C13CE2C4FDC53007A1D5E /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13CD2C4FDC53007A1D5E /* ContactsViewModel.swift */; };
+		E71C13D02C4FDC72007A1D5E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13CF2C4FDC72007A1D5E /* ContactsView.swift */; };
+		E71C13D52C4FDCA7007A1D5E /* AddNewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13D42C4FDCA7007A1D5E /* AddNewContactView.swift */; };
+		E71C13DD2C4FDD9F007A1D5E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13DC2C4FDD9F007A1D5E /* UserModel.swift */; };
+		E71C13DF2C4FE019007A1D5E /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13DE2C4FE019007A1D5E /* ContactRow.swift */; };
+		E71C13E12C4FF336007A1D5E /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13E02C4FF336007A1D5E /* ContactDetailView.swift */; };
+		E71C13E92C50374A007A1D5E /* ContactsSingletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13E82C50374A007A1D5E /* ContactsSingletonView.swift */; };
+		E71C13EB2C5038B0007A1D5E /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13EA2C5038B0007A1D5E /* Singleton.swift */; };
+		E71C13EF2C503F62007A1D5E /* AddNewContactSingletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13EE2C503F62007A1D5E /* AddNewContactSingletonView.swift */; };
 		E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD42C41896F00E550C3 /* WBChatApp.swift */; };
 		E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD62C41896F00E550C3 /* ContentView.swift */; };
 		E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BD82C41897100E550C3 /* Assets.xcassets */; };
@@ -14,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E71C13CB2C4FDB4E007A1D5E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E71C13CD2C4FDC53007A1D5E /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		E71C13CF2C4FDC72007A1D5E /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		E71C13D42C4FDCA7007A1D5E /* AddNewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactView.swift; sourceTree = "<group>"; };
+		E71C13DC2C4FDD9F007A1D5E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E71C13DE2C4FE019007A1D5E /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
+		E71C13E02C4FF336007A1D5E /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		E71C13E82C50374A007A1D5E /* ContactsSingletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSingletonView.swift; sourceTree = "<group>"; };
+		E71C13EA2C5038B0007A1D5E /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		E71C13EE2C503F62007A1D5E /* AddNewContactSingletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactSingletonView.swift; sourceTree = "<group>"; };
 		E71C3BD12C41896F00E550C3 /* WBChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71C3BD42C41896F00E550C3 /* WBChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBChatApp.swift; sourceTree = "<group>"; };
 		E71C3BD62C41896F00E550C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +52,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E71C13C72C4FD7BC007A1D5E /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13C82C4FD7C5007A1D5E /* View */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		E71C13C82C4FD7C5007A1D5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13CF2C4FDC72007A1D5E /* ContactsView.swift */,
+				E71C13DE2C4FE019007A1D5E /* ContactRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E71C13C92C4FD7CD007A1D5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13CD2C4FDC53007A1D5E /* ContactsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E71C13CA2C4FDB41007A1D5E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13CB2C4FDB4E007A1D5E /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		E71C13D22C4FDC88007A1D5E /* AddNewContact */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13D32C4FDC9A007A1D5E /* Views */,
+			);
+			path = AddNewContact;
+			sourceTree = "<group>";
+		};
+		E71C13D32C4FDC9A007A1D5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13E02C4FF336007A1D5E /* ContactDetailView.swift */,
+				E71C13D42C4FDCA7007A1D5E /* AddNewContactView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E71C13DB2C4FDD93007A1D5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13DC2C4FDD9F007A1D5E /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E71C13E22C503635007A1D5E /* Observed */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13C92C4FD7CD007A1D5E /* ViewModel */,
+				E71C13D22C4FDC88007A1D5E /* AddNewContact */,
+				E71C13C72C4FD7BC007A1D5E /* Contacts */,
+			);
+			path = Observed;
+			sourceTree = "<group>";
+		};
+		E71C13E32C50365A007A1D5E /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13E42C5036FB007A1D5E /* Contacts */,
+				E71C13E52C503704007A1D5E /* AddNewContact */,
+				E71C13EA2C5038B0007A1D5E /* Singleton.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		E71C13E42C5036FB007A1D5E /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13E82C50374A007A1D5E /* ContactsSingletonView.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		E71C13E52C503704007A1D5E /* AddNewContact */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13EE2C503F62007A1D5E /* AddNewContactSingletonView.swift */,
+			);
+			path = AddNewContact;
+			sourceTree = "<group>";
+		};
 		E71C3BC82C41896F00E550C3 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +167,10 @@
 			children = (
 				E71C3BD42C41896F00E550C3 /* WBChatApp.swift */,
 				E71C3BD62C41896F00E550C3 /* ContentView.swift */,
+				E71C13E32C50365A007A1D5E /* Singleton */,
+				E71C13E22C503635007A1D5E /* Observed */,
+				E71C13DB2C4FDD93007A1D5E /* Models */,
+				E71C13CA2C4FDB41007A1D5E /* Navigation */,
 				E71C3BD82C41897100E550C3 /* Assets.xcassets */,
 				E71C3BDA2C41897100E550C3 /* Preview Content */,
 			);
@@ -137,8 +255,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71C13E92C50374A007A1D5E /* ContactsSingletonView.swift in Sources */,
+				E71C13DD2C4FDD9F007A1D5E /* UserModel.swift in Sources */,
+				E71C13CC2C4FDB4E007A1D5E /* Router.swift in Sources */,
+				E71C13EF2C503F62007A1D5E /* AddNewContactSingletonView.swift in Sources */,
+				E71C13DF2C4FE019007A1D5E /* ContactRow.swift in Sources */,
+				E71C13CE2C4FDC53007A1D5E /* ContactsViewModel.swift in Sources */,
+				E71C13E12C4FF336007A1D5E /* ContactDetailView.swift in Sources */,
+				E71C13EB2C5038B0007A1D5E /* Singleton.swift in Sources */,
 				E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */,
+				E71C13D02C4FDC72007A1D5E /* ContactsView.swift in Sources */,
 				E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */,
+				E71C13D52C4FDCA7007A1D5E /* AddNewContactView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
