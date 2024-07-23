@@ -50,7 +50,6 @@ struct ContactsSingletonView: View {
             }
         }
     }
-    }
 }
 
 
