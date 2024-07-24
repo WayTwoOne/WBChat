@@ -11,16 +11,14 @@ struct AddNewContactSingletonView: View {
     @State var name = ""
     @State var email = ""
     @State var bio = ""
+    
     @Environment(\.dismiss) var dissmis
-    var shared = Singleton.shared
+    
+    var shared = ContactsSingletonViewModel.shared
     
     var body: some View {
         NavigationStack {
-            LazyVStack(alignment: .center, spacing: 15) {
-                TextField("name", text: $name)
-                TextField("email", text: $email)
-                TextField("bio", text: $bio)
-            }
+            ContactsTextFieldsView(name: $name, email: $email, bio: $bio)
             .navigationBarBackButtonHidden()
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

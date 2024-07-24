@@ -16,27 +16,25 @@ struct ContentView: View {
                     .navigationDestination(for: Pages.self) { page in
                         router.getPage(page)
                     }
+                    .navigationTitle("Contacts")
             }
-            .environmentObject(router)
             
-            .tabItem({
+            .tabItem {
                 Text("Observed")
-            })
+            }
             
             ContactsSingletonView()
                 .tabItem {
                     Text("Singleton")
                 }
-            
-            
-            
         }
+        .environmentObject(router)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(Router())
+//            .environmentObject(Router())
     }
 }

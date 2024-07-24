@@ -7,10 +7,10 @@
 
 import Foundation
 
-final class Singleton: ObservableObject {
+final class ContactsSingletonViewModel: ObservableObject {
     @Published var contacts: [User] = []
     
-    static let shared = Singleton()
+    static let shared = ContactsSingletonViewModel()
     
     private init() {}
     

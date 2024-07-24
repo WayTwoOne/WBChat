@@ -10,6 +10,8 @@ import Foundation
 final class ContactsViewModel: ObservableObject {
     @Published var contacts: [User] = []
     
+    static let shared = ContactsViewModel()
+    
     func getUser(name: String, email: String, bio: String) {
         contacts.append(User(name: name, email: email, bio: bio))
     }
