@@ -9,9 +9,11 @@ import SwiftUI
 
 struct AvatarView: View {
     let contact: Contacts
+    @StateObject var dispatchImage = DispatchImage()
+    
     var body: some View {
         ZStack {
-            Image(contact.name)
+            dispatchImage.image
                 .resizable()
                 .frame(width: 56, height: 56)
                 .padding(.all, 3)
@@ -35,6 +37,9 @@ struct AvatarView: View {
             .offset(x: 25, y: -25)
                 
         }
+        .onAppear {
+            dispatchImage.asyncImage(frome: contact.name)
+        }
     }
 }
 
@@ -46,6 +51,6 @@ extension AvatarView {
 
 struct AvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarView(contact: Contacts(name: "Анастасия Иванова", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -80400), isOnline: false, didStory: false, hasAvatar: true))
+        AvatarView(contact: Contacts(name: "Анастасия Иванова", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -80400), isOnline: false, didStory: false, hasAvatar: true), dispatchImage: DispatchImage())
     }
 }

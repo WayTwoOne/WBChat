@@ -18,7 +18,7 @@ struct NewContactView: View {
                         router.goBack()
                     } label: {
                         HStack {
-                            Image("vector ")
+                            Image("vector")
                             Text("Новый контакт")
                                 .foregroundColor(.black)
                         }

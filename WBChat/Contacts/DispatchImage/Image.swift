@@ -8,8 +8,12 @@
 import SwiftUI
 
 class DispatchImage: ObservableObject {
-    func asyncImage(frome name: String) -> Image {
-        
-        return Image(name)
+    @Published var image: Image = Image("")
+    
+    func asyncImage(frome name: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.image = Image(name)
+        }
     }
 }
