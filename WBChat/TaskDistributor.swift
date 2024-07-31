@@ -7,40 +7,36 @@
 
 import Foundation
 
-final class TaskDistributor {
+actor TaskDistributor {
     private var clients: [String: Client] = [:]
+    private var results: [String: String] = [:]
     private var taskQueue: Set<Task> = []
-    private let queue = DispatchQueue(label: "TaskDistributorQueue")
 
-    func addTask(_ task: Task) {
-        queue.async {
-            self.taskQueue.insert(task)
-            self.distributeTasks()
-        }
+
+    func addTask(_ task: Task) async {
+        taskQueue.insert(task)
+        await distributeTasks()
     }
 
-    private func distributeTasks() {
+    private func distributeTasks() async {
         guard !taskQueue.isEmpty else { return }
-        queue.async { [weak self] in
-            guard let self else { return }
-            for client in self.clients.values {
-                if let task = self.taskQueue.popFirst() {
-                    client.sendTask(task)
-                }
+        for client in clients.values {
+            if let task = taskQueue.popFirst() {
+                await client.sendTask(task)
             }
         }
     }
+    
+    func receiveResult(_ result: String, forTaskID taskID: String) async {
+        results[taskID] = result
+    }
 
     func registerClient(_ client: Client) {
-        queue.async {
-            self.clients[client.id] = client
-        }
+        clients[client.id] = client
     }
 
     func unregisterClient(_ client: Client) {
-        queue.async {
-            self.clients.removeValue(forKey: client.id)
-        }
+        clients.removeValue(forKey: client.id)
     }
 }
 

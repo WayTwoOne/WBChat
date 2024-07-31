@@ -7,7 +7,14 @@
 
 import Foundation
 
+enum Errors: Error {
+    case invalidURL
+    case noData
+    case decodingError
+}
+
 final class Client {
+    
     let id: String
     private let distributor: TaskDistributor
 
@@ -16,7 +23,20 @@ final class Client {
         self.id = UUID().uuidString
     }
 
-    func sendTask(_ task: Task) {}
+    func sendTask(_ task: Task) async {
+        do {
 
-    func handleResponse(_ response: Data) {}
+        } catch Errors.invalidURL {
+            print("Неверный url")
+        } catch Errors.decodingError {
+            print("Ошибка декодирования")
+        }
+    }
+
+    func handleResponse(_ response: Data) async {
+        do {
+        } catch Errors.noData {
+            print("Нет данных")
+        }
+    }
 }
