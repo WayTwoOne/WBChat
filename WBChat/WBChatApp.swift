@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct WBChatApp: App {
+    @StateObject var viewModel = ContactsViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

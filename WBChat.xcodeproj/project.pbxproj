@@ -7,18 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71C13CC2C4FDB4E007A1D5E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13CB2C4FDB4E007A1D5E /* Router.swift */; };
+		E71C13CE2C4FDC53007A1D5E /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13CD2C4FDC53007A1D5E /* ContactsViewModel.swift */; };
+		E71C13D02C4FDC72007A1D5E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13CF2C4FDC72007A1D5E /* ContactsView.swift */; };
+		E71C13D52C4FDCA7007A1D5E /* AddNewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13D42C4FDCA7007A1D5E /* AddNewContactView.swift */; };
+		E71C13E92C50374A007A1D5E /* ContactsSingletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13E82C50374A007A1D5E /* ContactsSingletonView.swift */; };
+		E71C13EB2C5038B0007A1D5E /* ContactsSingletonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13EA2C5038B0007A1D5E /* ContactsSingletonViewModel.swift */; };
+		E71C13EF2C503F62007A1D5E /* AddNewContactSingletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C13EE2C503F62007A1D5E /* AddNewContactSingletonView.swift */; };
 		E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD42C41896F00E550C3 /* WBChatApp.swift */; };
 		E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD62C41896F00E550C3 /* ContentView.swift */; };
 		E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BD82C41897100E550C3 /* Assets.xcassets */; };
 		E71C3BDC2C41897100E550C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */; };
+		E73A8E352C5D3516006FEDFE /* UISystem in Frameworks */ = {isa = PBXBuildFile; productRef = E73A8E342C5D3516006FEDFE /* UISystem */; };
+		E73A8E392C5D4233006FEDFE /* ContactsTextFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A8E382C5D4233006FEDFE /* ContactsTextFieldsView.swift */; };
+		E751F1F52C50EAD5006D8164 /* IfContactsIsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751F1F42C50EAD5006D8164 /* IfContactsIsEmptyView.swift */; };
+		E751F1F72C50EB0E006D8164 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751F1F62C50EB0E006D8164 /* ContactsListView.swift */; };
+		E751F1F92C50EBD2006D8164 /* IfContactsIsEmptySingletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751F1F82C50EBD2006D8164 /* IfContactsIsEmptySingletonView.swift */; };
+		E751F1FB2C50EC09006D8164 /* ContactsListSingletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751F1FA2C50EC09006D8164 /* ContactsListSingletonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E71C13CB2C4FDB4E007A1D5E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E71C13CD2C4FDC53007A1D5E /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		E71C13CF2C4FDC72007A1D5E /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		E71C13D42C4FDCA7007A1D5E /* AddNewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactView.swift; sourceTree = "<group>"; };
+		E71C13E82C50374A007A1D5E /* ContactsSingletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSingletonView.swift; sourceTree = "<group>"; };
+		E71C13EA2C5038B0007A1D5E /* ContactsSingletonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSingletonViewModel.swift; sourceTree = "<group>"; };
+		E71C13EE2C503F62007A1D5E /* AddNewContactSingletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactSingletonView.swift; sourceTree = "<group>"; };
 		E71C3BD12C41896F00E550C3 /* WBChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71C3BD42C41896F00E550C3 /* WBChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBChatApp.swift; sourceTree = "<group>"; };
 		E71C3BD62C41896F00E550C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E71C3BD82C41897100E550C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E73A8E322C5D34C6006FEDFE /* UISystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UISystem; path = Modules/UISystem; sourceTree = "<group>"; };
+		E73A8E382C5D4233006FEDFE /* ContactsTextFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTextFieldsView.swift; sourceTree = "<group>"; };
+		E751F1F42C50EAD5006D8164 /* IfContactsIsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfContactsIsEmptyView.swift; sourceTree = "<group>"; };
+		E751F1F62C50EB0E006D8164 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
+		E751F1F82C50EBD2006D8164 /* IfContactsIsEmptySingletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfContactsIsEmptySingletonView.swift; sourceTree = "<group>"; };
+		E751F1FA2C50EC09006D8164 /* ContactsListSingletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListSingletonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +52,108 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73A8E352C5D3516006FEDFE /* UISystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E71C13C72C4FD7BC007A1D5E /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13C82C4FD7C5007A1D5E /* View */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		E71C13C82C4FD7C5007A1D5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13CF2C4FDC72007A1D5E /* ContactsView.swift */,
+				E751F1F62C50EB0E006D8164 /* ContactsListView.swift */,
+				E751F1F42C50EAD5006D8164 /* IfContactsIsEmptyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E71C13C92C4FD7CD007A1D5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13CD2C4FDC53007A1D5E /* ContactsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E71C13CA2C4FDB41007A1D5E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13CB2C4FDB4E007A1D5E /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		E71C13D22C4FDC88007A1D5E /* AddNewContact */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13D32C4FDC9A007A1D5E /* Views */,
+			);
+			path = AddNewContact;
+			sourceTree = "<group>";
+		};
+		E71C13D32C4FDC9A007A1D5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13D42C4FDCA7007A1D5E /* AddNewContactView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E71C13E22C503635007A1D5E /* Observed */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13C92C4FD7CD007A1D5E /* ViewModel */,
+				E71C13D22C4FDC88007A1D5E /* AddNewContact */,
+				E71C13C72C4FD7BC007A1D5E /* Contacts */,
+			);
+			path = Observed;
+			sourceTree = "<group>";
+		};
+		E71C13E32C50365A007A1D5E /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13E42C5036FB007A1D5E /* Contacts */,
+				E71C13E52C503704007A1D5E /* AddNewContact */,
+				E751F1F32C50E9D6006D8164 /* ViewModel */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		E71C13E42C5036FB007A1D5E /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13E82C50374A007A1D5E /* ContactsSingletonView.swift */,
+				E751F1FA2C50EC09006D8164 /* ContactsListSingletonView.swift */,
+				E751F1F82C50EBD2006D8164 /* IfContactsIsEmptySingletonView.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		E71C13E52C503704007A1D5E /* AddNewContact */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13EE2C503F62007A1D5E /* AddNewContactSingletonView.swift */,
+			);
+			path = AddNewContact;
+			sourceTree = "<group>";
+		};
 		E71C3BC82C41896F00E550C3 = {
 			isa = PBXGroup;
 			children = (
+				E73A8E322C5D34C6006FEDFE /* UISystem */,
 				E71C3BD32C41896F00E550C3 /* WBChat */,
 				E71C3BD22C41896F00E550C3 /* Products */,
+				E73A8E332C5D3516006FEDFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +168,12 @@
 		E71C3BD32C41896F00E550C3 /* WBChat */ = {
 			isa = PBXGroup;
 			children = (
+				E73A8E382C5D4233006FEDFE /* ContactsTextFieldsView.swift */,
 				E71C3BD42C41896F00E550C3 /* WBChatApp.swift */,
 				E71C3BD62C41896F00E550C3 /* ContentView.swift */,
+				E71C13E32C50365A007A1D5E /* Singleton */,
+				E71C13E22C503635007A1D5E /* Observed */,
+				E71C13CA2C4FDB41007A1D5E /* Navigation */,
 				E71C3BD82C41897100E550C3 /* Assets.xcassets */,
 				E71C3BDA2C41897100E550C3 /* Preview Content */,
 			);
@@ -65,6 +186,21 @@
 				E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E73A8E332C5D3516006FEDFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E751F1F32C50E9D6006D8164 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E71C13EA2C5038B0007A1D5E /* ContactsSingletonViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +219,9 @@
 			dependencies = (
 			);
 			name = WBChat;
+			packageProductDependencies = (
+				E73A8E342C5D3516006FEDFE /* UISystem */,
+			);
 			productName = WBChat;
 			productReference = E71C3BD12C41896F00E550C3 /* WBChat.app */;
 			productType = "com.apple.product-type.application";
@@ -137,8 +276,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E751F1F72C50EB0E006D8164 /* ContactsListView.swift in Sources */,
+				E71C13E92C50374A007A1D5E /* ContactsSingletonView.swift in Sources */,
+				E751F1F52C50EAD5006D8164 /* IfContactsIsEmptyView.swift in Sources */,
+				E751F1F92C50EBD2006D8164 /* IfContactsIsEmptySingletonView.swift in Sources */,
+				E751F1FB2C50EC09006D8164 /* ContactsListSingletonView.swift in Sources */,
+				E73A8E392C5D4233006FEDFE /* ContactsTextFieldsView.swift in Sources */,
+				E71C13CC2C4FDB4E007A1D5E /* Router.swift in Sources */,
+				E71C13EF2C503F62007A1D5E /* AddNewContactSingletonView.swift in Sources */,
+				E71C13CE2C4FDC53007A1D5E /* ContactsViewModel.swift in Sources */,
+				E71C13EB2C5038B0007A1D5E /* ContactsSingletonViewModel.swift in Sources */,
 				E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */,
+				E71C13D02C4FDC72007A1D5E /* ContactsView.swift in Sources */,
 				E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */,
+				E71C13D52C4FDCA7007A1D5E /* AddNewContactView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +425,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +454,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +490,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E73A8E342C5D3516006FEDFE /* UISystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UISystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E71C3BC92C41896F00E550C3 /* Project object */;
 }
