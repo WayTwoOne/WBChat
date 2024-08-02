@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UISystem
 
 final class ContactsSingletonViewModel: ObservableObject {
     @Published var contacts: [User] = []
+    @Published var contact: User = User(name: "", email: "", bio: "")
     
     static let shared = ContactsSingletonViewModel()
     

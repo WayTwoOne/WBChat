@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContactsTextFieldsView: View {
+    
     @Binding var name: String
     @Binding var email: String
     @Binding var bio: String
@@ -27,6 +28,6 @@ struct ContactsTextFieldsView: View {
 
 struct ContactsTextFieldsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsTextFieldsView(name: .constant("Name"), email: .constant("Email"), bio: .constant("Bio"))
+        ContactsTextFieldsView(name: .constant("Name"), email: .constant("Email"), bio: .constant("bio"))
     }
 }

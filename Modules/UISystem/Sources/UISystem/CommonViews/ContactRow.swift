@@ -7,9 +7,14 @@
 
 import SwiftUI
 
-struct ContactRow: View {
-    let user: User
-    var body: some View {
+public struct ContactRow: View {
+    public let user: User
+    
+    public init(user: User) {
+        self.user = user
+    }
+    
+    public var body: some View {
         ScrollView {
             LazyVStack(alignment: .center) {
                 Image(systemName: "person")
@@ -41,8 +46,8 @@ struct ContactRow: View {
     }
 }
 
-struct ContactRow_Previews: PreviewProvider {
-    static var previews: some View {
-        ContactRow(user: User(name: "Tim", email: "email.con", bio: "Hello world"))
-    }
-}
+//struct ContactRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContactRow(user: User(name: "Tim", email: "email.con", bio: "Hello world"))
+//    }
+//}

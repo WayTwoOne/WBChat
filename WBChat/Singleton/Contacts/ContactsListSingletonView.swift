@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct ContactsListSingletonView: View {
     var viewModel: ContactsSingletonViewModel

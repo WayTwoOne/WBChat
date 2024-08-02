@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UISystem
 
 final class ContactsViewModel: ObservableObject {
     @Published var contacts: [User] = []
