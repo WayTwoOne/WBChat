@@ -1,0 +1,17 @@
+query AnimeList {
+  Page {
+    mediaList {
+      media {
+        title {
+          english
+          native
+        }
+        coverImage {
+          extraLarge
+        }
+        description
+        episodes
+      }
+    }
+  }
+}

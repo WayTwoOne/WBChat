@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct WBChatApp: App {
+    @StateObject private var viewModel = AnimeViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
