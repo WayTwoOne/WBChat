@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7150DF12C60280700C3DA75 /* ExyteChat in Frameworks */ = {isa = PBXBuildFile; productRef = E7150DF02C60280700C3DA75 /* ExyteChat */; };
 		E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD42C41896F00E550C3 /* WBChatApp.swift */; };
 		E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BD82C41897100E550C3 /* Assets.xcassets */; };
 		E71C3BDC2C41897100E550C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */; };
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7150DF12C60280700C3DA75 /* ExyteChat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +172,9 @@
 			dependencies = (
 			);
 			name = WBChat;
+			packageProductDependencies = (
+				E7150DF02C60280700C3DA75 /* ExyteChat */,
+			);
 			productName = WBChat;
 			productReference = E71C3BD12C41896F00E550C3 /* WBChat.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +203,9 @@
 				Base,
 			);
 			mainGroup = E71C3BC82C41896F00E550C3;
+			packageReferences = (
+				E7150DEF2C60280700C3DA75 /* XCRemoteSwiftPackageReference "Chat" */,
+			);
 			productRefGroup = E71C3BD22C41896F00E550C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -437,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7150DEF2C60280700C3DA75 /* XCRemoteSwiftPackageReference "Chat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/Chat.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7150DF02C60280700C3DA75 /* ExyteChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7150DEF2C60280700C3DA75 /* XCRemoteSwiftPackageReference "Chat" */;
+			productName = ExyteChat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E71C3BC92C41896F00E550C3 /* Project object */;
 }
