@@ -23,7 +23,6 @@ struct ContactsScreen: View {
                     .opacity(0)
                 }
         }
-        
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarLeading) {
                 Text("Контакты")
@@ -43,7 +42,6 @@ struct ContactsScreen: View {
             }
         })
     }
-    
 }
 
 

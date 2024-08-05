@@ -13,35 +13,27 @@ struct ContentView: View {
     @StateObject var router = Router()
     
     var body: some View {
-        TabView {
+        TabView(selection: $tabSelected) {
             NavigationStack(path: $router.path) {
                 router.getPage(.contactsList)
                     .navigationDestination(for: MyPage.self) { page in
                         router.getPage(page)
                     }
-                    .tabItem {
-                    Image("person.2")
-                        .renderingMode(.template)
-                }
             }
-//            .overlay(alignment: .bottom) {
-//                CustomTabBarView(tabSelcted: $tabSelected)
-//            }
-            .environmentObject(router)
-            .searchable(text: $searchText)
+            .tag(1)
             
-            Text("Messages List")
-                .tabItem {
-                    Image("message")
-                        .renderingMode(.template)
-                }
+            Text("Messenger")
+                .tag(2)
             
-            Text("More")
-                .tabItem {
-                    Image("more")
-                        .renderingMode(.template)
-                }
+            Text("More info")
+                .tag(3)
         }
+        .overlay(alignment: .bottom) {
+            CustomTabBarView(tabSelcted: $tabSelected)
+        }
+        
+        .environmentObject(router)
+        .searchable(text: $searchText)
     }
 }
 
