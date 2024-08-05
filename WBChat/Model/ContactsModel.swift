@@ -6,27 +6,41 @@
 //
 
 import Foundation
+import ExyteChat
 
-struct Contacts: Hashable {
+struct User: Hashable, Equatable {
     var id = UUID()
+    let uid: String
     var name: String = ""
     var phoneNumber: String = ""
     var lastSeenOnline: Date? = nil
     var isOnline: Bool = false
     var didStory: Bool = false
     var hasAvatar: Bool = false
-    var avatar: String? = nil
+    var avatar: URL? = nil
 }
 
-extension Contacts {
-    static func getContacts() -> [Contacts] {
+extension User {
+    static func getContacts() -> [User] {
         [
-            Contacts(name: "Анастасия Иванова", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -80400), isOnline: false, didStory: false, hasAvatar: true),
-            Contacts(name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true),
-            Contacts(name: "Маман", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -10800), isOnline: false, didStory: true, hasAvatar: true),
-            Contacts(name: "Арбуз Дыня", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true),
-            Contacts(name: "Иван Иванов", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: false),
-            Contacts(name: "Лиса Алиса", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -1800), isOnline: false, didStory: true, hasAvatar: false),
+            User(uid: "Настя", name: "Анастасия Иванова", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -80400), isOnline: false, didStory: false, hasAvatar: true),
+            User(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true),
+            User(uid: "Маман", name: "Маман", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -10800), isOnline: false, didStory: true, hasAvatar: true),
+            User(uid: "Арбуз", name: "Арбуз Дыня", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true),
+            User(uid: "Иван", name: "Иван Иванов", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: false),
+            User(uid: "Лиса", name: "Лиса Алиса", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -1800), isOnline: false, didStory: true, hasAvatar: false),
         ]
+    }
+}
+
+extension User {
+    var isCurrentUser: Bool {
+        uid == "1"
+    }
+}
+
+extension User {
+    func toChatUser() -> ExyteChat.User {
+        ExyteChat.User(id: uid, name: name, avatarURL: avatar, isCurrentUser: isCurrentUser)
     }
 }

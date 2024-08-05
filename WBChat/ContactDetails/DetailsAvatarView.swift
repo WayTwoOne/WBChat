@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailsAvatarView: View {
-    let contact: Contacts
+    let contact: User
     var body: some View {
         switch contact.hasAvatar {
         case false:
@@ -49,6 +49,6 @@ extension DetailsAvatarView {
 
 struct DetailsAvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsAvatarView(contact: Contacts(name: "Лиса Алиса", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -1800), isOnline: false, didStory: true, hasAvatar: false))
+        DetailsAvatarView(contact: User(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
     }
 }

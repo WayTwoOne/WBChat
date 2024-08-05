@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContactsScreen: View {
     @State private var searchText = ""
-    @State private var contacts = Contacts.getContacts()
+    @State private var contacts = User.getContacts()
     @EnvironmentObject var router: Router
     
     var body: some View {
@@ -18,7 +18,7 @@ struct ContactsScreen: View {
                 .padding(.leading, -15)
                 .background {
                     Button("", action: {
-                        router.homeScreen = .addNewContact
+                        router.push(.chat(contact))
                     })
                     .opacity(0)
                 }

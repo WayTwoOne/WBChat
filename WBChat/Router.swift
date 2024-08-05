@@ -31,6 +31,8 @@ final class Router: ObservableObject {
             ContactsScreen()
         case .contactsDetails(let contact):
             DetailsScreen(contact: contact)
+        case .chat(let contact):
+            ContactChatScreen(contact: contact)
         case .addNewContact:
             NewContactView()
         }
@@ -38,5 +40,5 @@ final class Router: ObservableObject {
 }
 
 enum MyPage: Hashable {
-    case contactsList, contactsDetails(Contacts), addNewContact
+    case contactsList, contactsDetails(User), chat(User), addNewContact
 }

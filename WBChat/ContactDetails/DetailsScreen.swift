@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailsScreen: View {
-    let contact: Contacts
+    let contact: User
     @EnvironmentObject var router: Router
     
     
@@ -45,6 +45,6 @@ struct DetailsScreen: View {
 
 struct DetailsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsScreen(contact: Contacts(name: "Лиса Алиса", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -1800), isOnline: false, didStory: true, hasAvatar: false))
+        DetailsScreen(contact: User(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
     }
 }

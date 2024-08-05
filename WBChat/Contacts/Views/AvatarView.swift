@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AvatarView: View {
-    let contact: Contacts
+    let contact: User
     var body: some View {
         ZStack {
             Image(contact.name)
@@ -46,6 +46,6 @@ extension AvatarView {
 
 struct AvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarView(contact: Contacts(name: "Анастасия Иванова", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -80400), isOnline: false, didStory: false, hasAvatar: true))
+        AvatarView(contact: User(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
     }
 }
