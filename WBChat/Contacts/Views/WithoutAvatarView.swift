@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WithoutAvatarView: View {
-    let contact: User
+    let contact: MockUser
     
     var body: some View {
         ZStack {
@@ -59,6 +59,6 @@ extension WithoutAvatarView {
 
 struct WithoutAvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        WithoutAvatarView(contact: User(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
+        WithoutAvatarView(contact: MockUser(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
     }
 }

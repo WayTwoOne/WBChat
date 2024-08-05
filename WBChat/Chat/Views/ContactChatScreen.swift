@@ -12,10 +12,10 @@ import Messages
 struct ContactChatScreen: View {
     @StateObject private var viewModel = ChatViewModel()
     @EnvironmentObject var router: Router
-    let contact: User
+    let contact: MockUser
     var body: some View {
         ChatView(messages: viewModel.messages) { draft in
-            viewModel.send(draftMessage: draft)
+            viewModel.send(draft: draft)
         } inputViewBuilder: { message, attachment, state, style, actions in
             Group {
                 switch style {
@@ -74,11 +74,13 @@ struct ContactChatScreen: View {
 
             }
         }
+        .onAppear(perform: viewModel.onStart)
+        .onDisappear(perform: viewModel.onStop)
     }
 }
 
 struct ContactChatScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ContactChatScreen(contact: User(uid: "Lisa", name: "Лиса Алиса", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -1800), isOnline: false, didStory: true, hasAvatar: false))
+        ContactChatScreen(contact: MockUser(uid: "Lisa", name: "Лиса Алиса", phoneNumber: "+7 999 999 99-99", lastSeenOnline: Date(timeIntervalSinceNow: -1800), isOnline: false, didStory: true, hasAvatar: false))
     }
 }

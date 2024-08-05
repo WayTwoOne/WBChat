@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContactsScreen: View {
     @State private var searchText = ""
-    @State private var contacts = User.getContacts()
+    @State private var contacts = MockUser.getContacts()
     @EnvironmentObject var router: Router
     
     var body: some View {

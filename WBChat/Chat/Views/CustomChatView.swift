@@ -15,6 +15,7 @@ struct CustomChatView: View {
     
     var body: some View {
         GeometryReader { geometry in
+            Spacer()
             HStack(alignment: .center, spacing: 10) {
                 Button {
                     actions(.photo)
@@ -52,6 +53,7 @@ struct CustomChatView: View {
 //            }
             
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

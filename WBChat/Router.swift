@@ -40,5 +40,5 @@ final class Router: ObservableObject {
 }
 
 enum MyPage: Hashable {
-    case contactsList, contactsDetails(User), chat(User), addNewContact
+    case contactsList, contactsDetails(MockUser), chat(MockUser), addNewContact
 }

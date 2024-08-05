@@ -10,7 +10,7 @@ import ExyteChat
 
 struct UserMessage {
     let uid: String
-    let sender: User
+    let sender: MockUser
     let createdAt: Date
     var status: Message.Status?
 

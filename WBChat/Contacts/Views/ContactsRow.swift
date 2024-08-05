@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactsRow: View {
-    let contact: User
+    let contact: MockUser
     
     var body: some View {
         HStack(alignment: .center, spacing: 10) {
@@ -63,6 +63,6 @@ extension ContactsRow {
 
 struct ContactsRow_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsRow(contact: User(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
+        ContactsRow(contact: MockUser(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailsView: View {
-    let contact: User
+    let contact: MockUser
     var body: some View {
         VStack {
                 Text(contact.name)
@@ -31,6 +31,6 @@ extension DetailsView {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(contact: User(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
+        DetailsView(contact: MockUser(uid: "Петя", name: "Петя", phoneNumber: "+7 999 999 99-99", lastSeenOnline: nil, isOnline: true, didStory: false, hasAvatar: true))
     }
 }
