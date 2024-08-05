@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ExyteChat
+import ExyteMediaPicker
 
 struct CustomChatView: View {
     @EnvironmentObject private var viewModel: ChatViewModel
@@ -35,22 +36,33 @@ struct CustomChatView: View {
                     }
                     .padding(.horizontal)
                 
-                Button {
-                    actions(.send)
-                    
-                } label: {
-                    Image("SentMessage")
-                        .renderingMode(.template)
-                        .foregroundColor(Color("wbPurple"))
-                        .frame(width: 24, height: 24)
+                if message.isEmpty {
+                    Button {
+                        actions(.recordAudioLock)
+                        actions(.send)
+                    } label: {
+                        Image(systemName: "mic")
+                            .renderingMode(.template)
+                            .foregroundColor(Color("wbPurple"))
+                            .frame(width: 24, height: 24)
+                    }
+                } else {
+                    Button {
+                        actions(.send)
+                    } label: {
+                        Image("SentMessage")
+                            .renderingMode(.template)
+                            .foregroundColor(Color("wbPurple"))
+                            .frame(width: 24, height: 24)
+                    }
                 }
             }
             .frame(width: geometry.size.width, height: geometry.size.height / 15)
             
-//            .background(alignment: .top){
-//                Rectangle()
-//                    .foregroundColor(.gray)
-//            }
+            //            .background(alignment: .top){
+            //                Rectangle()
+            //                    .foregroundColor(.gray)
+            //            }
             
         }
         .toolbar(.hidden, for: .tabBar)

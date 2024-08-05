@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ExyteChat
+import ExyteMediaPicker
 import Messages
 
 struct ContactChatScreen: View {
@@ -32,6 +33,19 @@ struct ContactChatScreen: View {
                 }
             }
         }
+        .mediaPickerTheme(
+            main: .init(
+                text: .white,
+                albumSelectionBackground: .green,
+                fullscreenPhotoBackground: .green
+            ),
+            selection: .init(
+                emptyTint: .white,
+                emptyBackground: .black.opacity(0.25),
+                selectedTint: .green,
+                fullscreenTint: .white
+            )
+        )
         .chatTheme(colors: .init(grayStatus: .gray, errorStatus: .red, buttonBackground: .purple, myMessage: Color("wbPurple"), textMediaPicker: Color("wbPurple"), recordDot: Color("wbPurple")))
         .navigationBarBackButtonHidden()
         .toolbar(.hidden, for: .tabBar)
@@ -48,7 +62,7 @@ struct ContactChatScreen: View {
                             .foregroundColor(.black)
                     }
                 }
-
+                
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -59,7 +73,7 @@ struct ContactChatScreen: View {
                         .renderingMode(.template)
                         .foregroundColor(.black)
                 }
-
+                
                 
             }
             
@@ -71,7 +85,7 @@ struct ContactChatScreen: View {
                         .renderingMode(.template)
                         .foregroundColor(.black)
                 }
-
+                
             }
         }
         .onAppear(perform: viewModel.onStart)
