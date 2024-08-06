@@ -11,6 +11,8 @@ import ExyteChat
 
 final class ChatInteractor: ChatInteractorProtocol {
     
+//    let user: MockUser
+    
     private lazy var chatData = ChatData()
     
     private lazy var chatState = CurrentValueSubject<[UserMessage], Never>(generateStartMessages())

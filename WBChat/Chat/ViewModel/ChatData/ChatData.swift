@@ -13,7 +13,7 @@ import ExyteMediaPicker
 final class ChatData {
     
     // Alternative for avatars `https://ui-avatars.com/api/?name=Tim`
-    let system = MockUser(uid: "0", name: "System")
+//    let user: MockUser
     let petya = MockUser(
         uid: "1",
         name: "Петя",
@@ -31,8 +31,12 @@ final class ChatData {
         avatar: AssetExtractor.createLocalUrl(forImageNamed: "Арбуз Дыня")
     )
     
+//    init(user: MockUser) {
+//        self.user = user
+//    }
+    
     func randomMessage(senders: [MockUser] = [], date: Date? = nil) -> UserMessage {
-        let senders = senders.isEmpty ? [maman, petya] : senders
+        let senders = senders.isEmpty ? [petya, maman] : senders
         let sender = senders.randomElement()!
         let date = date ?? Date()
         let images = randomImages()

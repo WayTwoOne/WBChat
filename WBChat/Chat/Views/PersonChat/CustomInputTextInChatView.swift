@@ -9,14 +9,13 @@ import SwiftUI
 import ExyteChat
 import ExyteMediaPicker
 
-struct CustomChatView: View {
+struct CustomInputTextInChatView: View {
     @EnvironmentObject private var viewModel: ChatViewModel
     @Binding var message: String
     let actions: (InputViewAction) -> Void
     
     var body: some View {
-        GeometryReader { geometry in
-            Spacer()
+        VStack {
             HStack(alignment: .center, spacing: 10) {
                 Button {
                     actions(.photo)
@@ -26,7 +25,6 @@ struct CustomChatView: View {
                         .foregroundColor(Color("wbGray"))
                         .frame(width: 24, height: 24)
                 }
-                
                 TextField("Text", text: $message)
                     .font(.system(size: 14))
                     .frame(width: 279, height: 35)
@@ -34,7 +32,7 @@ struct CustomChatView: View {
                     .background {
                         Color("wbTextField")
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 10)
                 
                 if message.isEmpty {
                     Button {
@@ -57,15 +55,8 @@ struct CustomChatView: View {
                     }
                 }
             }
-            .frame(width: geometry.size.width, height: geometry.size.height / 15)
-            
-            //            .background(alignment: .top){
-            //                Rectangle()
-            //                    .foregroundColor(.gray)
-            //            }
-            
         }
-        .toolbar(.hidden, for: .tabBar)
+        .padding(.bottom, 20)
     }
 }
 
