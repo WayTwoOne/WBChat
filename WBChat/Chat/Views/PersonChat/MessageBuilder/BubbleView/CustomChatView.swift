@@ -12,35 +12,26 @@ import ExyteMediaPicker
 struct CustomChatView: View {
     let message: Message
     let isOp: Bool
-    @State private var status = Status()
     
     var body: some View {
         
-        MessageBubbleView(isOP: message.user.isCurrentUser ? true : false, messageContent: message, status: status.getStatus(status: message.status))
-    }
-}
-    
-struct Status {
-    func getStatus(status: Message.Status?) -> String {
-        switch status {
-        case .sending:
-            return "Отправляется"
-        case .sent:
-            return "Отправлено"
-        case .read:
-            return "Прочитано"
-        case .error(let error):
-            return error.text.localizedLowercase
-        case .none:
-            return ""
-        }
+        MessageBubbleView(isOP: message.user.isCurrentUser ? true : false, message: message)
     }
 }
 
 struct CustomChatView_Previews: PreviewProvider {
-    static let string: Message = .init(id: "", user: User(id: "", name: "", avatarURL: URL(string: "")!, isCurrentUser: true))
+    static private var shortMessage = "Hi, buddy!"
+    static private var longMessage = "Hello hello hello hello hello hello hello hello hello hello hello hello hello\n hello hello hello hello d d d d d d d d"
+
+    static private var message = Message(
+        id: UUID().uuidString,
+        user: User(id: UUID().uuidString, name: "Stan", avatarURL: nil, isCurrentUser: true),
+        status: .read,
+        text: longMessage,
+        attachments: []
+    )
     
     static var previews: some View {
-        CustomChatView(message: string, isOp: true)
+        CustomChatView(message: message, isOp: true)
     }
 }
