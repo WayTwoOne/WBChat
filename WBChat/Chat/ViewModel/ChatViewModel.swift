@@ -13,16 +13,26 @@ import Combine
 
 final class ChatViewModel: ObservableObject {
     @Published var messages: [Message] = []
+    @Published var isOp: Bool
     
     private let interactor: ChatInteractorProtocol
     private var subscriptions = Set<AnyCancellable>()
     
-    init(interactor: ChatInteractorProtocol = ChatInteractor()) {
+    init(isOp: Bool, interactor: ChatInteractorProtocol = ChatInteractor()) {
         self.interactor = interactor
+        self.isOp = isOp
     }
     
     func send(draft: DraftMessage) {
         interactor.send(draftMessage: draft)
+    }
+    
+    func sendToUser() {
+        isOp = true
+    }
+    
+    func receiveFromUser() {
+        isOp = false
     }
     
     func onStart() {

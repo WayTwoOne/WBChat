@@ -30,6 +30,9 @@
 		E74C5B5D2C61636E00EDD7C5 /* Sequence+AsyncMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C5B5C2C61636E00EDD7C5 /* Sequence+AsyncMap.swift */; };
 		E74C5B5F2C61638F00EDD7C5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C5B5E2C61638F00EDD7C5 /* Date.swift */; };
 		E74C5B622C617BB800EDD7C5 /* CustomChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C5B612C617BB800EDD7C5 /* CustomChatView.swift */; };
+		E753D24A2C63D22E002E99CC /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753D2492C63D22E002E99CC /* URLCache.swift */; };
+		E753D2542C640073002E99CC /* MessageWithPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753D2532C640073002E99CC /* MessageWithPhotos.swift */; };
+		E753D2582C640F10002E99CC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753D2572C640F10002E99CC /* ViewModel.swift */; };
 		E7EB94EB2C418AC6002E38DC /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB94D92C418AC6002E38DC /* DetailsScreen.swift */; };
 		E7EB94EC2C418AC6002E38DC /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB94DA2C418AC6002E38DC /* DetailsView.swift */; };
 		E7EB94ED2C418AC6002E38DC /* SocialNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB94DB2C418AC6002E38DC /* SocialNetworkView.swift */; };
@@ -71,6 +74,9 @@
 		E74C5B5E2C61638F00EDD7C5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E74C5B602C61767400EDD7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E74C5B612C617BB800EDD7C5 /* CustomChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatView.swift; sourceTree = "<group>"; };
+		E753D2492C63D22E002E99CC /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
+		E753D2532C640073002E99CC /* MessageWithPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageWithPhotos.swift; sourceTree = "<group>"; };
+		E753D2572C640F10002E99CC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E7EB94D92C418AC6002E38DC /* DetailsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
 		E7EB94DA2C418AC6002E38DC /* DetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		E7EB94DB2C418AC6002E38DC /* SocialNetworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworkView.swift; sourceTree = "<group>"; };
@@ -125,8 +131,8 @@
 				E7EB94D82C418AC6002E38DC /* ContactDetails */,
 				E7EB94DD2C418AC6002E38DC /* Contacts */,
 				E7EB94E62C418AC6002E38DC /* AddANewContact */,
-				E7EB94E32C418AC6002E38DC /* CustomTabBar */,
 				E7EB94E82C418AC6002E38DC /* Model */,
+				E7EB94E32C418AC6002E38DC /* CustomTabBar */,
 				E7EB94F92C418B0A002E38DC /* Router.swift */,
 				E71C3BD82C41897100E550C3 /* Assets.xcassets */,
 				E71C3BDA2C41897100E550C3 /* Preview Content */,
@@ -157,20 +163,19 @@
 			isa = PBXGroup;
 			children = (
 				E74C5B3D2C60DE1600EDD7C5 /* ContactChatScreen.swift */,
-				E74C5B422C60DE9900EDD7C5 /* CustomInputTextInChatView.swift */,
-				E74335F32C6280C50084F537 /* CustomChatView */,
+				E753D2512C640041002E99CC /* TextInput */,
+				E74335F32C6280C50084F537 /* MessageBuilder */,
 			);
 			path = PersonChat;
 			sourceTree = "<group>";
 		};
-		E74335F32C6280C50084F537 /* CustomChatView */ = {
+		E74335F32C6280C50084F537 /* MessageBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				E74C5B612C617BB800EDD7C5 /* CustomChatView.swift */,
-				E74335F62C62822C0084F537 /* MessageBubbleView.swift */,
-				E74335F42C6281CF0084F537 /* MessageBubbleShapeView.swift */,
+				E753D2522C640057002E99CC /* BubbleView */,
+				E753D2562C64007F002E99CC /* Message+Photo+Video */,
 			);
-			path = CustomChatView;
+			path = MessageBuilder;
 			sourceTree = "<group>";
 		};
 		E74C5B3C2C60DDF800EDD7C5 /* Chat */ = {
@@ -236,8 +241,36 @@
 			children = (
 				E74C5B5C2C61636E00EDD7C5 /* Sequence+AsyncMap.swift */,
 				E74C5B5E2C61638F00EDD7C5 /* Date.swift */,
+				E753D2492C63D22E002E99CC /* URLCache.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		E753D2512C640041002E99CC /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				E74C5B422C60DE9900EDD7C5 /* CustomInputTextInChatView.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		E753D2522C640057002E99CC /* BubbleView */ = {
+			isa = PBXGroup;
+			children = (
+				E74C5B612C617BB800EDD7C5 /* CustomChatView.swift */,
+				E74335F62C62822C0084F537 /* MessageBubbleView.swift */,
+				E74335F42C6281CF0084F537 /* MessageBubbleShapeView.swift */,
+			);
+			path = BubbleView;
+			sourceTree = "<group>";
+		};
+		E753D2562C64007F002E99CC /* Message+Photo+Video */ = {
+			isa = PBXGroup;
+			children = (
+				E753D2532C640073002E99CC /* MessageWithPhotos.swift */,
+				E753D2572C640F10002E99CC /* ViewModel.swift */,
+			);
+			path = "Message+Photo+Video";
 			sourceTree = "<group>";
 		};
 		E7EB94D82C418AC6002E38DC /* ContactDetails */ = {
@@ -375,8 +408,10 @@
 				E7EB94EF2C418AC6002E38DC /* ContactsScreen.swift in Sources */,
 				E7EB94EE2C418AC6002E38DC /* DetailsAvatarView.swift in Sources */,
 				E74C5B582C615CE800EDD7C5 /* ChatData.swift in Sources */,
+				E753D2542C640073002E99CC /* MessageWithPhotos.swift in Sources */,
 				E74335F72C62822C0084F537 /* MessageBubbleView.swift in Sources */,
 				E74C5B5D2C61636E00EDD7C5 /* Sequence+AsyncMap.swift in Sources */,
+				E753D24A2C63D22E002E99CC /* URLCache.swift in Sources */,
 				E7EB94F02C418AC6002E38DC /* ContactsRow.swift in Sources */,
 				E74C5B4C2C61111F00EDD7C5 /* Attachment.swift in Sources */,
 				E74335EC2C624C600084F537 /* ChatList.swift in Sources */,
@@ -390,6 +425,7 @@
 				E74C5B402C60DE2500EDD7C5 /* ChatViewModel.swift in Sources */,
 				E7EB94EB2C418AC6002E38DC /* DetailsScreen.swift in Sources */,
 				E7EB94FA2C418B0A002E38DC /* Router.swift in Sources */,
+				E753D2582C640F10002E99CC /* ViewModel.swift in Sources */,
 				E74335F02C624E090084F537 /* ChatListVIewModel.swift in Sources */,
 				E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */,
 				E74335F52C6281CF0084F537 /* MessageBubbleShapeView.swift in Sources */,

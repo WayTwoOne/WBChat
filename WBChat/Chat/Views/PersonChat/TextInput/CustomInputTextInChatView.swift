@@ -10,7 +10,7 @@ import ExyteChat
 import ExyteMediaPicker
 
 struct CustomInputTextInChatView: View {
-    @EnvironmentObject private var viewModel: ChatViewModel
+    @EnvironmentObject var viewModel: ChatViewModel
     @Binding var message: String
     let actions: (InputViewAction) -> Void
     
@@ -38,6 +38,7 @@ struct CustomInputTextInChatView: View {
                     Button {
                         actions(.recordAudioLock)
                         actions(.send)
+                        viewModel.sendToUser()
                     } label: {
                         Image(systemName: "mic")
                             .renderingMode(.template)
@@ -47,6 +48,7 @@ struct CustomInputTextInChatView: View {
                 } else {
                     Button {
                         actions(.send)
+                        viewModel.sendToUser()
                     } label: {
                         Image("SentMessage")
                             .renderingMode(.template)
@@ -60,8 +62,11 @@ struct CustomInputTextInChatView: View {
     }
 }
 
-//struct CustomChatView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CustomChatView(message: .constant("Hello world"))
-//    }
-//}
+struct CustomInputTextInChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomInputTextInChatView(message: .constant("Hello world"), actions: { action in
+            ()
+        })
+            .environmentObject(ChatViewModel(isOp: true))
+    }
+}

@@ -10,36 +10,37 @@ import ExyteChat
 
 struct MessageBubbleView: View {
     var isOP: Bool
-    var messageContent: String
-    var status: Message.Status?
-    var statusStruct: Status
+    var messageContent: Message
+    var status: String
     
     var body: some View {
         ZStack {
             VStack {
+                MessageWithPhotos(message: messageContent)
                 HStack {
                     isOP ? Spacer() : nil
-                    Text(messageContent)
+                    Text(messageContent.text)
                         .padding()
                         .foregroundStyle(isOP ? .white : .black,
                                          isOP ? .white : .black)
                         .background(isOP
-                                    ? .blue
+                                    ? Color("wbPurple")
                                     : Color(red: 210/255, green: 210/255, blue: 210/255)
                         )
                         .clipShape(MessageBubbleShape(direction: isOP ? .right : .left))
                     isOP ? nil : Spacer()
                 }
-               Text(statusStruct.getStatus(status: status))
             }
         }
         .padding((isOP ? .leading : .trailing), 90.0)
+        .padding(.vertical, 5)
         
     }
 }
 
-//struct MessageBubbleView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MessageBubbleView(isOP: true, messageContent: "Hello")
-//    }
-//}
+struct MessageBubbleView_Previews: PreviewProvider {
+    static let message = Message(id: "", user: User(id: "", name: "", avatarURL: URL(string: "")!, isCurrentUser: true), text: "HEllo world wtosasgdhjashgdjhasgdjhagsdjhgasd")
+    static var previews: some View {
+        MessageBubbleView(isOP: true, messageContent: message, status: "отправлено")
+    }
+}

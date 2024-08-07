@@ -11,10 +11,12 @@ import ExyteMediaPicker
 
 struct CustomChatView: View {
     let message: Message
+    let isOp: Bool
     @State private var status = Status()
     
     var body: some View {
-        MessageBubbleView(isOP: message.user.name == "You" ? true : Bool.random(), messageContent: message.text, status: message.status, statusStruct: status)
+        
+        MessageBubbleView(isOP: message.user.isCurrentUser ? true : false, messageContent: message, status: status.getStatus(status: message.status))
     }
 }
     
@@ -35,8 +37,10 @@ struct Status {
     }
 }
 
-//struct CustomChatView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CustomChatView()
-//    }
-//}
+struct CustomChatView_Previews: PreviewProvider {
+    static let string: Message = .init(id: "", user: User(id: "", name: "", avatarURL: URL(string: "")!, isCurrentUser: true))
+    
+    static var previews: some View {
+        CustomChatView(message: string, isOp: true)
+    }
+}
