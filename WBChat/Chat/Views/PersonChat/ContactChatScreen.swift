@@ -10,7 +10,7 @@ import ExyteChat
 import ExyteMediaPicker
 
 struct ContactChatScreen: View {
-    @StateObject private var viewModel = ChatViewModel(isOp: false)
+    @EnvironmentObject var viewModel: ChatViewModel
     @EnvironmentObject var router: Router
     let contact: MockUser
     var body: some View {
@@ -51,7 +51,7 @@ struct ContactChatScreen: View {
                 fullscreenTint: .white
             )
         )
-        .chatTheme(colors: .init(grayStatus: .gray, errorStatus: .red, buttonBackground: .purple, myMessage: Color("wbPurple"), textMediaPicker: Color("wbPurple"), recordDot: Color("wbPurple")))
+        .chatTheme(colors: .init(grayStatus: .gray, errorStatus: .red, buttonBackground: .purple, myMessage: Color("wbPurple"), textMediaPicker: .green, recordDot: .white))
         .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {

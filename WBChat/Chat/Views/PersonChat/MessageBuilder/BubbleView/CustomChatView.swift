@@ -14,7 +14,24 @@ struct CustomChatView: View {
     let isOp: Bool
     
     var body: some View {
+        if !message.attachments.isEmpty {
+        }
         
+        if !message.text.isEmpty {
+            
+        }
+        if let recording = message.recording {
+            VStack(alignment: .trailing, spacing: 8) {
+                RecordWaveformWithButtons(
+                    recording: recording,
+                    colorButton: message.user.isCurrentUser ? .white : .gray,
+                    colorButtonBg: message.user.isCurrentUser ? .white : .gray,
+                    colorWaveform: message.user.isCurrentUser ? .white : .gray
+                )
+                    .padding(.bottom, 8)
+                    .padding(.trailing, 12)
+            }
+        }
         MessageBubbleView(isOP: message.user.isCurrentUser ? true : false, message: message)
     }
 }
@@ -25,7 +42,7 @@ struct CustomChatView_Previews: PreviewProvider {
 
     static private var message = Message(
         id: UUID().uuidString,
-        user: User(id: UUID().uuidString, name: "Stan", avatarURL: nil, isCurrentUser: true),
+        user: User(id: UUID().uuidString, name: "Stan", avatarURL: nil, isCurrentUser: false),
         status: .read,
         text: longMessage,
         attachments: []

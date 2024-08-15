@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var searchText = ""
     @StateObject var router = Router()
-    
+    @StateObject var viewModel = ChatViewModel(isOp: false)
     var body: some View {
             NavigationStack(path: $router.path) {
                 router.getPage(.contactsList)
@@ -18,7 +18,7 @@ struct ContentView: View {
                         router.getPage(page)
                     }
             }
-        
+        .environmentObject(viewModel)
         .environmentObject(router)
         .searchable(text: $searchText)
     }

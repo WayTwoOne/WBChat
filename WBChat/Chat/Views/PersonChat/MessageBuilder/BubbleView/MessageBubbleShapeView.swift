@@ -72,6 +72,7 @@ struct MessageBubbleShape: Shape {
 struct MessageBubbleShape_Previews: PreviewProvider {
     static var previews: some View {
         MessageBubbleShape(direction: .left)
-            .frame(width: 200, height: 100)
+            .frame(width: 300, height: 100)
+            
     }
 }

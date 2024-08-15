@@ -11,6 +11,8 @@ import ExyteChat
 struct MessageBubbleView: View {
     @Environment(\.locale) var locale
     @State private var statusStruct = Status()
+    @State private var theme: ChatTheme.Colors = .init()
+    
     var isOP: Bool
     var message: Message
     
@@ -20,26 +22,52 @@ struct MessageBubbleView: View {
                 HStack {
                     isOP ? Spacer() : nil
                     VStack {
-                        MessageWithPhotos(message: message)
-                            .padding(.top, 5)
-                        Text(message.text)
-                            .padding(.all, 10)
-                            .font(.system(size: 14))
-                            .foregroundStyle(isOP ? .white : .black,
-                                             isOP ? .white : .black)
+                        if !message.attachments.isEmpty {
+                            MessageWithPhotos(message: message)
+                        }
+                        if !message.text.isEmpty {
+                            Text(message.text)
+                                .multilineTextAlignment(.leading)
+                                .frame(width: 300)
+                                .padding(.all, 10)
+                                .font(.system(size: 14))
+                                .foregroundStyle(isOP ? .white : .black,
+                                                 isOP ? .white : .black)
+                        }
                         
-                        TimeAndStatusView(message: message, isOP: isOP, statusStruct: statusStruct)
+                        if let recording = message.recording {
+                            VStack(alignment: .trailing, spacing: 8) {
+                                RecordWaveformWithButtons(
+                                    recording: recording,
+                                    colorButton: message.user.isCurrentUser ? theme.myMessage : .white,
+                                    colorButtonBg: message.user.isCurrentUser ? .white : theme.myMessage,
+                                    colorWaveform: message.user.isCurrentUser ? theme.textDarkContext : theme.textLightContext
+                                )
+                                .padding(.horizontal, 8)
+                                .padding(.top, 8)
+                                .padding(.bottom, 8)
+                                .padding(.trailing, 12)
+                            }
+                        }
+                        
+                        TimeAndStatusView(message: message, isOP: isOP, statusStruct: statusStruct.getStatus(status: message.status))
+                            .multilineTextAlignment(isOP ? .leading : .trailing)
+                            .padding(isOP ? .leading : .trailing, 110)
+                            .padding(.bottom, 5)
+                            .font(.system(size: 10))
+                            .foregroundColor(.white)
                     }
                     .background(isOP
                                 ? Color("wbPurple")
-                                : Color(red: 210/255, green: 210/255, blue: 210/255)
+                                : Color(.gray)
                     )
                     .clipShape(MessageBubbleShape(direction: isOP ? .right : .left))
+                    
                     isOP ? nil : Spacer()
                 }
             }
         }
-        .padding((isOP ? .leading : .trailing), 90.0)
+        .padding((isOP ? .leading : .trailing), 50)
         .padding(.vertical, 5)
         
     }
@@ -68,9 +96,9 @@ struct MessageBubbleView_Previews: PreviewProvider {
 
     static private var message = Message(
         id: UUID().uuidString,
-        user: User(id: UUID().uuidString, name: "Stan", avatarURL: nil, isCurrentUser: false),
-        status: .read,
-        text: longMessage,
+        user: User(id: UUID().uuidString, name: "Stan", avatarURL: nil, isCurrentUser: true),
+        status: .sending,
+        text: shortMessage,
         attachments: []
     )
     static var previews: some View {

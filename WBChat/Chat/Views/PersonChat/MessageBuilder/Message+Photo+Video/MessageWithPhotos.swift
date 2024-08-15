@@ -17,12 +17,7 @@ struct MessageWithPhotos: View {
         AttachmentsGrid(attachments: message.attachments) {
             viewModel.presentAttachmentFullScreen($0)
         }
-//        .overlay(alignment: .bottomTrailing) {
-//            if message.text.isEmpty {
-//                messageTimeView(needsCapsule: true)
-//                    .padding(4)
-//            }
-//        }
+        .frame(width: 300)
         .contentShape(Rectangle())
     }
 }
@@ -30,7 +25,7 @@ struct MessageWithPhotos: View {
 struct AttachmentsGrid: View {
     
     let onTap: (Attachment) -> Void
-    let maxImages: Int = 4 // TODO: Make injectable
+    let maxImages: Int = 4 
 
     private let single: (Attachment)?
     private let grid: [Attachment]
