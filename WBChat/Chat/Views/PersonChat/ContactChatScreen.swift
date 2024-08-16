@@ -16,28 +16,7 @@ struct ContactChatScreen: View {
     var body: some View {
         ChatView(messages: viewModel.messages) { draft in
             viewModel.send(draft: draft)
-        } messageBuilder: { message, position, attachment in
-                CustomChatView(message: message, isOp: viewModel.isOp)
-                .padding(.horizontal)
-        } inputViewBuilder: { message, attachment, state, style, actions in
-                Group {
-                    switch style {
-                    case .message:
-                        CustomInputTextInChatView(message: message, actions: actions)
-                    case .signature:
-                        VStack {
-                            HStack {
-                                Button("Send") {
-                                    actions(.send) 
-                                    viewModel.sendToUser()
-                                }
-                            }
-                            TextField("Compose a signature for photo", text: message)
-                                .background(Color.green)
-                        }
-                    }
-                }
-            }
+        }
         .mediaPickerTheme(
             main: .init(
                 text: .white,

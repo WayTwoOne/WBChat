@@ -36,7 +36,7 @@ struct CustomInputTextInChatView: View {
                 
                 if message.isEmpty {
                     Button {
-                        actions(.recordAudioLock)
+                        actions(.recordAudioTap)
                         actions(.send)
                         viewModel.sendToUser()
                     } label: {

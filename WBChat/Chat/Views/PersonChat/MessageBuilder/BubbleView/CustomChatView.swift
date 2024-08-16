@@ -20,18 +20,6 @@ struct CustomChatView: View {
         if !message.text.isEmpty {
             
         }
-        if let recording = message.recording {
-            VStack(alignment: .trailing, spacing: 8) {
-                RecordWaveformWithButtons(
-                    recording: recording,
-                    colorButton: message.user.isCurrentUser ? .white : .gray,
-                    colorButtonBg: message.user.isCurrentUser ? .white : .gray,
-                    colorWaveform: message.user.isCurrentUser ? .white : .gray
-                )
-                    .padding(.bottom, 8)
-                    .padding(.trailing, 12)
-            }
-        }
         MessageBubbleView(isOP: message.user.isCurrentUser ? true : false, message: message)
     }
 }

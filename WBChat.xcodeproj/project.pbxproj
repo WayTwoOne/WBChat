@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7150DF12C60280700C3DA75 /* ExyteChat in Frameworks */ = {isa = PBXBuildFile; productRef = E7150DF02C60280700C3DA75 /* ExyteChat */; };
+		E7082F812C6F8C58004367BB /* ReplyMessege.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7082F802C6F8C58004367BB /* ReplyMessege.swift */; };
+		E7082F8C2C6FCFDB004367BB /* Chat-main 07.09.00 in Resources */ = {isa = PBXBuildFile; fileRef = E7082F8B2C6FCFDB004367BB /* Chat-main 07.09.00 */; };
+		E7082F8E2C6FCFE7004367BB /* ExyteChat in Frameworks */ = {isa = PBXBuildFile; productRef = E7082F8D2C6FCFE7004367BB /* ExyteChat */; };
 		E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD42C41896F00E550C3 /* WBChatApp.swift */; };
 		E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BD82C41897100E550C3 /* Assets.xcassets */; };
 		E71C3BDC2C41897100E550C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */; };
-		E74335EC2C624C600084F537 /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74335EB2C624C600084F537 /* ChatList.swift */; };
-		E74335EE2C624DAA0084F537 /* ChatListStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74335ED2C624DAA0084F537 /* ChatListStories.swift */; };
-		E74335F02C624E090084F537 /* ChatListVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74335EF2C624E090084F537 /* ChatListVIewModel.swift */; };
-		E74335F22C625B5D0084F537 /* ChatStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74335F12C625B5D0084F537 /* ChatStory.swift */; };
 		E74335F52C6281CF0084F537 /* MessageBubbleShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74335F42C6281CF0084F537 /* MessageBubbleShapeView.swift */; };
 		E74335F72C62822C0084F537 /* MessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74335F62C62822C0084F537 /* MessageBubbleView.swift */; };
 		E74C5B3E2C60DE1600EDD7C5 /* ContactChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C5B3D2C60DE1600EDD7C5 /* ContactChatScreen.swift */; };
@@ -57,14 +55,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7082F802C6F8C58004367BB /* ReplyMessege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyMessege.swift; sourceTree = "<group>"; };
+		E7082F8B2C6FCFDB004367BB /* Chat-main 07.09.00 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Chat-main 07.09.00"; path = "Modulse/Chat-main 07.09.00"; sourceTree = "<group>"; };
 		E71C3BD12C41896F00E550C3 /* WBChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71C3BD42C41896F00E550C3 /* WBChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBChatApp.swift; sourceTree = "<group>"; };
 		E71C3BD82C41897100E550C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E74335EB2C624C600084F537 /* ChatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
-		E74335ED2C624DAA0084F537 /* ChatListStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListStories.swift; sourceTree = "<group>"; };
-		E74335EF2C624E090084F537 /* ChatListVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVIewModel.swift; sourceTree = "<group>"; };
-		E74335F12C625B5D0084F537 /* ChatStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStory.swift; sourceTree = "<group>"; };
 		E74335F42C6281CF0084F537 /* MessageBubbleShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleShapeView.swift; sourceTree = "<group>"; };
 		E74335F62C62822C0084F537 /* MessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleView.swift; sourceTree = "<group>"; };
 		E74C5B3D2C60DE1600EDD7C5 /* ContactChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactChatScreen.swift; sourceTree = "<group>"; };
@@ -112,18 +108,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7150DF12C60280700C3DA75 /* ExyteChat in Frameworks */,
+				E7082F8E2C6FCFE7004367BB /* ExyteChat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7082F862C6FCF40004367BB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				E7082F8B2C6FCFDB004367BB /* Chat-main 07.09.00 */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		E7082F882C6FCF59004367BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E71C3BC82C41896F00E550C3 = {
 			isa = PBXGroup;
 			children = (
+				E7082F862C6FCF40004367BB /* Packages */,
 				E71C3BD32C41896F00E550C3 /* WBChat */,
 				E71C3BD22C41896F00E550C3 /* Products */,
+				E7082F882C6FCF59004367BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,17 +175,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E74335E92C624C290084F537 /* ChatList */ = {
-			isa = PBXGroup;
-			children = (
-				E74335EB2C624C600084F537 /* ChatList.swift */,
-				E74335ED2C624DAA0084F537 /* ChatListStories.swift */,
-				E74335F12C625B5D0084F537 /* ChatStory.swift */,
-				E74335EF2C624E090084F537 /* ChatListVIewModel.swift */,
-			);
-			path = ChatList;
-			sourceTree = "<group>";
-		};
 		E74335EA2C624C320084F537 /* PersonChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +209,6 @@
 		E74C5B412C60DE8000EDD7C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E74335E92C624C290084F537 /* ChatList */,
 				E74335EA2C624C320084F537 /* PersonChat */,
 			);
 			path = Views;
@@ -289,6 +290,7 @@
 				E74335F62C62822C0084F537 /* MessageBubbleView.swift */,
 				E7585BF52C64396F00A1AF96 /* TimeAndStatusView.swift */,
 				E74335F42C6281CF0084F537 /* MessageBubbleShapeView.swift */,
+				E7082F802C6F8C58004367BB /* ReplyMessege.swift */,
 			);
 			path = BubbleView;
 			sourceTree = "<group>";
@@ -374,7 +376,7 @@
 			);
 			name = WBChat;
 			packageProductDependencies = (
-				E7150DF02C60280700C3DA75 /* ExyteChat */,
+				E7082F8D2C6FCFE7004367BB /* ExyteChat */,
 			);
 			productName = WBChat;
 			productReference = E71C3BD12C41896F00E550C3 /* WBChat.app */;
@@ -405,7 +407,6 @@
 			);
 			mainGroup = E71C3BC82C41896F00E550C3;
 			packageReferences = (
-				E7150DEF2C60280700C3DA75 /* XCRemoteSwiftPackageReference "Chat" */,
 			);
 			productRefGroup = E71C3BD22C41896F00E550C3 /* Products */;
 			projectDirPath = "";
@@ -422,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E71C3BDC2C41897100E550C3 /* Preview Assets.xcassets in Resources */,
+				E7082F8C2C6FCFDB004367BB /* Chat-main 07.09.00 in Resources */,
 				E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,21 +448,17 @@
 				E753D24A2C63D22E002E99CC /* URLCache.swift in Sources */,
 				E7EB94F02C418AC6002E38DC /* ContactsRow.swift in Sources */,
 				E74C5B4C2C61111F00EDD7C5 /* Attachment.swift in Sources */,
-				E74335EC2C624C600084F537 /* ChatList.swift in Sources */,
 				E74C5B5A2C61633700EDD7C5 /* Lorem.swift in Sources */,
 				E7EB94F42C418AC6002E38DC /* TabBarIcons.swift in Sources */,
 				E74C5B622C617BB800EDD7C5 /* CustomChatView.swift in Sources */,
-				E74335F22C625B5D0084F537 /* ChatStory.swift in Sources */,
 				E74FBA2E2C64DA85008D5C28 /* RecordWave.swift in Sources */,
 				E74FBA262C64D7D5008D5C28 /* RecorderCLass.swift in Sources */,
 				E7EB94EC2C418AC6002E38DC /* DetailsView.swift in Sources */,
 				E7EB94F62C418AC6002E38DC /* ContactsModel.swift in Sources */,
-				E74335EE2C624DAA0084F537 /* ChatListStories.swift in Sources */,
 				E74C5B402C60DE2500EDD7C5 /* ChatViewModel.swift in Sources */,
 				E7EB94EB2C418AC6002E38DC /* DetailsScreen.swift in Sources */,
 				E7EB94FA2C418B0A002E38DC /* Router.swift in Sources */,
 				E753D2582C640F10002E99CC /* ViewModel.swift in Sources */,
-				E74335F02C624E090084F537 /* ChatListVIewModel.swift in Sources */,
 				E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */,
 				E74335F52C6281CF0084F537 /* MessageBubbleShapeView.swift in Sources */,
 				E74FBA2A2C64D98F008D5C28 /* Indicator.swift in Sources */,
@@ -470,6 +468,7 @@
 				E74C5B522C615C5400EDD7C5 /* Intractor.swift in Sources */,
 				E7EB94ED2C418AC6002E38DC /* SocialNetworkView.swift in Sources */,
 				E74C5B432C60DE9900EDD7C5 /* CustomInputTextInChatView.swift in Sources */,
+				E7082F812C6F8C58004367BB /* ReplyMessege.swift in Sources */,
 				E7EB94F72C418AC6002E38DC /* ContentView.swift in Sources */,
 				E74C5B552C615C7C00EDD7C5 /* IntractorProtocol.swift in Sources */,
 				E7EB94F52C418AC6002E38DC /* NewContactView.swift in Sources */,
@@ -678,21 +677,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		E7150DEF2C60280700C3DA75 /* XCRemoteSwiftPackageReference "Chat" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/Chat.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		E7150DF02C60280700C3DA75 /* ExyteChat */ = {
+		E7082F8D2C6FCFE7004367BB /* ExyteChat */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E7150DEF2C60280700C3DA75 /* XCRemoteSwiftPackageReference "Chat" */;
 			productName = ExyteChat;
 		};
 /* End XCSwiftPackageProductDependency section */
