@@ -1,8 +1,8 @@
 //
-//  Sequence+AsyncMap.swift
+//  Sequence+asyncMap.swift
 //  WBChat
 //
-//  Created by Vladimir on 05.08.2024.
+//  Created by Vladimir on 16.08.2024.
 //
 
 import Foundation
