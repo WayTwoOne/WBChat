@@ -11,6 +11,10 @@
 		E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71C3BD62C41896F00E550C3 /* ContentView.swift */; };
 		E71C3BD92C41897100E550C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BD82C41897100E550C3 /* Assets.xcassets */; };
 		E71C3BDC2C41897100E550C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */; };
+		E7EB95852C419434002E38DC /* EnteringTheReceivedCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB957F2C419434002E38DC /* EnteringTheReceivedCodeViewModel.swift */; };
+		E7EB95862C419434002E38DC /* PinCodeTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB95812C419434002E38DC /* PinCodeTextFieldView.swift */; };
+		E7EB95872C419434002E38DC /* EnteringCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB95822C419434002E38DC /* EnteringCodeTextView.swift */; };
+		E7EB958D2C4194EA002E38DC /* Sync+Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB958B2C4194EA002E38DC /* Sync+Focus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		E71C3BD62C41896F00E550C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E71C3BD82C41897100E550C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7EB957F2C419434002E38DC /* EnteringTheReceivedCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteringTheReceivedCodeViewModel.swift; sourceTree = "<group>"; };
+		E7EB95812C419434002E38DC /* PinCodeTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeTextFieldView.swift; sourceTree = "<group>"; };
+		E7EB95822C419434002E38DC /* EnteringCodeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteringCodeTextView.swift; sourceTree = "<group>"; };
+		E7EB958B2C4194EA002E38DC /* Sync+Focus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sync+Focus.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,9 @@
 			children = (
 				E71C3BD42C41896F00E550C3 /* WBChatApp.swift */,
 				E71C3BD62C41896F00E550C3 /* ContentView.swift */,
+				E7EB957E2C419434002E38DC /* ViewModel */,
+				E7EB95802C419434002E38DC /* Views */,
+				E7EB95892C4194EA002E38DC /* Extentions */,
 				E71C3BD82C41897100E550C3 /* Assets.xcassets */,
 				E71C3BDA2C41897100E550C3 /* Preview Content */,
 			);
@@ -65,6 +76,32 @@
 				E71C3BDB2C41897100E550C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7EB957E2C419434002E38DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB957F2C419434002E38DC /* EnteringTheReceivedCodeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E7EB95802C419434002E38DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB95812C419434002E38DC /* PinCodeTextFieldView.swift */,
+				E7EB95822C419434002E38DC /* EnteringCodeTextView.swift */,
+			);
+			name = Views;
+			path = HW11/Views;
+			sourceTree = "<group>";
+		};
+		E7EB95892C4194EA002E38DC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB958B2C4194EA002E38DC /* Sync+Focus.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EB95852C419434002E38DC /* EnteringTheReceivedCodeViewModel.swift in Sources */,
+				E7EB95862C419434002E38DC /* PinCodeTextFieldView.swift in Sources */,
 				E71C3BD72C41896F00E550C3 /* ContentView.swift in Sources */,
+				E7EB95872C419434002E38DC /* EnteringCodeTextView.swift in Sources */,
 				E71C3BD52C41896F00E550C3 /* WBChatApp.swift in Sources */,
+				E7EB958D2C4194EA002E38DC /* Sync+Focus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
